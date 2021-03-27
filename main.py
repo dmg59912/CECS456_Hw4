@@ -20,15 +20,55 @@ if __name__ == '__main__':
         print('Shape of data:\n', data.shape)
       
         count = 0
-        for i in range(len(data)):
+        #for i in range(len(data)):
 
-            for j in range(len(data[0])):
-                print(data[i][j][0])
-                if( data[i][j][0] == .1):
+         #   for j in range(len(data[0])):
+              #  print(data[i][j][0])
+               # if( data[i][j][0] == .1):
                 #print(data[0][i][0])
-                    count += 1
+                    #count += 1
        # print(count)
       
-        print(count)
-        print(data[0][1])
+        #print(count)
+       # print(data[0][1])
+        #print(data[0][0][1])
+        #print(data[0][0])
+        let = len(data) * len(data[0])
+
+        arr = np.zeros((let ,2))
+        count = 0
+
+        vals, idxs = np.unique(data, return_index = True)
+        min_max = np.zeros((len(data),3))
+        
+        print("\n\n\nand then ...")
+
+        for i in range(len(data)):
+            for j in range(len(data[0])):
+                arr[i][0] = data[i][j][0]
+                arr[i][1] = data[i][j][1]
+
+
+
+       
+    
+
+        # for i in range(len(vals)):
+        #     count = 0
+
+        #     for j in range(len(data)):
+        #             for k in range(len(data[0])):
+
+        #                 if (vals[i] == data[j][k][0]):
+        #                     count += 1
+
+        #     arr.append(count)
+    
+
+        print(arr)
+        print(len(arr))
+        print("shape of array is ", arr.shape)
+        #print(sum(arr))
+        #print(min_max.shape)
+        print(len(vals))
         
